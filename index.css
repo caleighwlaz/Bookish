@@ -1,0 +1,15 @@
+* {
+    box-sizing: border-box;
+}
+body {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.purple {
+    color: hsl(262, 44%, 66%)
+}
+.blue {
+    color: hsl(188, 51%, 75%)
+}
