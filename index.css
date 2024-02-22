@@ -20,15 +20,15 @@ header {
     height: 100px;
 }
 
+#logo {
+    height: 100px;
+}
+
 a {
     color: hsl(262, 100%, 0%);
     text-decoration: none;
     padding: 10px;
     top: 50px;
-}
-
-#logo {
-    height: 100px;
 }
 
 button {
@@ -44,10 +44,10 @@ button {
     top: 150px;
 }
 
-.purple {
+.purple-text {
     color: hsl(262, 44%, 66%);
 }
 
-.blue {
+.blue-text {
     color: hsl(188, 51%, 75%);
 }
