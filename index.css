@@ -1,41 +1,37 @@
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-  font-family: "Roboto Mono", monospace;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  background-color: hsl(22, 67%, 90%);
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    background-color: hsl(22, 67%, 90%);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas: "header header"
+                         "intro .";
+    grid-template-rows: 1fr 5fr;
+    grid-template-columns: 4fr 5fr;
+    height: 100vh;
+    width: 100vw;
 }
 
 header {
+    grid-area: header;
     background-color: hsl(27, 51%, 75%);
-    position: fixed;
-    display: flex;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    width: 100%;
-    height: 100px;
-    align-items: center;
-    justify-content: space-between;
 }
 
-nav {
-    font-size: 30px;
-}
-
-#logo {
-    height: 100px;
-}
-
-a {
-    color: hsl(262, 100%, 0%);
-    text-decoration: none;
-    padding: 10px;
-    top: 50px;
+.intro {
+    grid-area: intro;
+    border-right: solid hsl(27, 51%, 75%);
+    border-left: solid hsl(27, 51%, 75%);
+    border-bottom: solid hsl(27, 51%, 75%);
 }
 
 button {
@@ -43,27 +39,11 @@ button {
     border: transparent;
     font-family: "Roboto Mono", monospace;
     border-radius: 5px;
-    font-size: 30px;
 }
 
-#intro {
-    border: solid 20px hsl(27, 51%, 75%);
-    border-top: 0;
-    top: 100px;
-    position: fixed;
-    width: 50%;
-    left: 0px;
-    padding: 20px;
-    bottom: 0px;
-}
-
-h1 {
-    font-size: 30px;
-}
-
-p {
-    font-size: 20px;
-    padding: 20px;
+a {
+    color: hsl(262, 100%, 0%);
+    text-decoration: none;
 }
 
 .purple-text {
