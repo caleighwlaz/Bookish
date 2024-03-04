@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-size: 16px;
 }
 
 body {
@@ -17,7 +18,7 @@ body {
     grid-template-areas: "header header"
                          "intro .";
     grid-template-rows: 1fr 5fr;
-    grid-template-columns: 4fr 5fr;
+    grid-template-columns: 1fr 1fr;
     height: 100vh;
     width: 100vw;
 }
@@ -29,9 +30,15 @@ header {
 
 .intro {
     grid-area: intro;
-    border-right: solid hsl(27, 51%, 75%);
-    border-left: solid hsl(27, 51%, 75%);
-    border-bottom: solid hsl(27, 51%, 75%);
+    border-right: 1rem solid hsl(27, 51%, 75%);
+    border-left: 1rem solid hsl(27, 51%, 75%);
+    border-bottom: 1rem solid hsl(27, 51%, 75%);
+    padding: 5%;
+}
+
+#logo {
+    height: 5rem;
+    width: auto;
 }
 
 button {
@@ -41,9 +48,23 @@ button {
     border-radius: 5px;
 }
 
+button:hover {
+    background-color: hsl(262, 50%, 75%);
+    transition: 1s;
+}
+
+button:active {
+    text-decoration: underline;
+}
+
 a {
-    color: hsl(262, 100%, 0%);
+    color: black;
     text-decoration: none;
+}
+
+.intro p {
+    padding-top: 10%;
+    padding-bottom: 10%;
 }
 
 .purple-text {
