@@ -26,6 +26,9 @@ body {
 header {
     grid-area: header;
     background-color: hsl(27, 51%, 75%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .intro {
@@ -63,8 +66,8 @@ a {
 }
 
 .intro p {
-    padding-top: 10%;
-    padding-bottom: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
 }
 
 .purple-text {
