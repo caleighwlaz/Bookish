@@ -31,6 +31,23 @@ header {
     justify-content: space-between;
 }
 
+.left-header {
+    display: flex;
+    align-items: center;
+    gap: 3.5rem;
+    margin-left: 1rem;
+    flex-shrink: 0;
+}
+
+.right-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-right: 1rem;
+    margin-left: 2rem;
+    flex-shrink: 0;
+}
+
 .intro {
     grid-area: intro;
     border-right: 3rem solid hsl(27, 51%, 75%);
@@ -49,6 +66,8 @@ button {
     border: transparent;
     font-family: "Roboto Mono", monospace;
     border-radius: 5px;
+    font-size: 1rem;
+    padding: 0.25rem;
 }
 
 button:hover {
@@ -78,6 +97,7 @@ a {
 .intro p {
     font-size: 1.1rem;
     padding-bottom: 2rem;
+    line-height: 1.7rem;
 }
 
 .intro button {
