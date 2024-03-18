@@ -118,3 +118,7 @@ a:active {
 .blue-text {
     color: hsl(188, 51%, 65%);
 }
+
+@media (max-width: 1040px) {
+  /*add hamburger menu*/
+}
