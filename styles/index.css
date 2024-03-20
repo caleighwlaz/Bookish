@@ -5,12 +5,19 @@
     font-size: 18px;
 }
 
+:root {
+    --brown: hsl(27, 51%, 75%);
+    --tan: hsl(22, 67%, 90%);
+    --blue: hsl(188, 51%, 75%);
+    --purple: hsl(262, 44%, 66%);
+}
+
 body {
     font-family: "Roboto Mono", monospace;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    background-color: hsl(22, 67%, 90%);
+    background-color: var(--tan);
 }
 
 #grid-container {
@@ -25,7 +32,7 @@ body {
 
 header {
     grid-area: header;
-    background-color: hsl(27, 51%, 75%);
+    background-color: var(--brown);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -50,9 +57,9 @@ nav {
 
 .intro {
     grid-area: intro;
-    border-right: 2rem solid hsl(27, 51%, 75%);
-    border-left: 2rem solid hsl(27, 51%, 75%);
-    border-bottom: 2rem solid hsl(27, 51%, 75%);
+    border-right: 2rem solid var(--brown);
+    border-left: 2rem solid var(--brown);
+    border-bottom: 2rem solid var(--brown);
     padding: 5%;
 }
 
@@ -62,7 +69,7 @@ nav {
 }
 
 button {
-    background-color: hsl(188, 51%, 75%);
+    background-color: var(--blue);
     border: transparent;
     font-family: "Roboto Mono", monospace;
     border-radius: 0.5rem;
@@ -112,7 +119,7 @@ a:active {
 }
 
 .purple-text {
-    color: hsl(262, 44%, 66%);
+    color: var(--purple);
 }
 
 .blue-text {
