@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+}
+
+:root {
+    --brown: hsl(27, 51%, 75%);
+    --tan: hsl(22, 67%, 90%);
+    --blue: hsl(188, 51%, 75%);
+    --purple: hsl(262, 44%, 66%);
+}
+
+body {
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    background-color: var(--tan);
+}
+
+#grid-container {
+    display: grid;
+    grid-template-areas: "header header"
+                         "intro .";
+    grid-template-rows: 1fr 7fr;
+    grid-template-columns: 4fr 5fr;
+    height: 100vh;
+    width: 100vw;
+}
+
+header {
+    grid-area: header;
+    background-color: var(--brown);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: auto;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin-left: 1rem;
+    flex-shrink: 0;
+}
+
+.sign-in {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-right: 1rem;
+    margin-left: 3rem;
+    flex-shrink: 0;
+}
+
+main {
+    grid-area: intro;
+    border-right: 2rem solid var(--brown);
+    border-left: 2rem solid var(--brown);
+    border-bottom: 2rem solid var(--brown);
+    padding: 5%;
+    overflow: auto;
+}
+
+#logo {
+    height: 4.5rem;
+    width: auto;
+}
+
+button {
+    background-color: var(--blue);
+    border: transparent;
+    font-family: "Roboto Mono", monospace;
+    border-radius: 0.5rem;
+    padding: 0.5rem 0.6rem;
+}
+
+button:hover {
+    background-color: hsl(262, 50%, 75%);
+    transition: 1s;
+}
+
+button:active {
+    text-decoration: underline;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    color: hsl(262, 90%, 75%);
+}
+
+a:active {
+    text-decoration: underline;
+}
+
+main h1,
+main span {
+    font-size: 2rem;
+    font-weight: 450;
+}
+
+main h1 {
+    padding: 0.25rem 0 1.5rem;
+}
+
+main p {
+    padding-bottom: 1.5rem;
+    line-height: 1.5rem;
+}
+
+main button {
+    font-size: 1.1rem;
+    margin: 0.25rem;
+}
+
+.purple-text {
+    color: var(--purple);
+}
+
+.blue-text {
+    color: hsl(188, 51%, 65%);
+}
+
+@media (max-width: 1040px) {
+  /*add hamburger menu*/
+}
