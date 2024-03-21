@@ -1,3 +1,8 @@
+$brown: hsl(27, 51%, 75%);
+$tan: hsl(22, 67%, 90%);
+$blue: hsl(188, 51%, 75%);
+$purple: hsl(262, 44%, 66%);
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -5,19 +10,12 @@
     font-size: 18px;
 }
 
-:root {
-    --brown: hsl(27, 51%, 75%);
-    --tan: hsl(22, 67%, 90%);
-    --blue: hsl(188, 51%, 75%);
-    --purple: hsl(262, 44%, 66%);
-}
-
 body {
     font-family: "Roboto Mono", monospace;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    background-color: var(--tan);
+    background-color: $tan;
 }
 
 #grid-container {
@@ -32,7 +30,7 @@ body {
 
 header {
     grid-area: header;
-    background-color: var(--brown);
+    background-color: $brown;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -58,9 +56,9 @@ nav {
 
 main {
     grid-area: intro;
-    border-right: 2rem solid var(--brown);
-    border-left: 2rem solid var(--brown);
-    border-bottom: 2rem solid var(--brown);
+    border-right: 2rem solid $brown;
+    border-left: 2rem solid $brown;
+    border-bottom: 2rem solid $brown;
     padding: 5%;
     overflow: auto;
 }
@@ -71,7 +69,7 @@ main {
 }
 
 button {
-    background-color: var(--blue);
+    background-color: $blue;
     border: transparent;
     font-family: "Roboto Mono", monospace;
     border-radius: 0.5rem;
@@ -100,28 +98,28 @@ a:active {
     text-decoration: underline;
 }
 
-main h1,
-main span {
-    font-size: 2rem;
-    font-weight: 450;
-}
-
-main h1 {
-    padding: 0.25rem 0 1.5rem;
-}
-
-main p {
-    padding-bottom: 1.5rem;
-    line-height: 1.5rem;
-}
-
-main button {
-    font-size: 1.1rem;
-    margin: 0.25rem;
+main {
+    h1 {
+      padding: 0.25rem 0 1.5rem;
+        font-size: 2rem;
+        font-weight: 450;
+    }
+    span {
+      font-size: 2rem;
+      font-weight: 450;
+    }
+    p {
+      padding-bottom: 1.5rem;
+      line-height: 1.5rem; 
+    }
+    button {
+      font-size: 1.1rem;
+      margin: 0.25rem;
+    }
 }
 
 .purple-text {
-    color: var(--purple);
+    color: $purple;
 }
 
 .blue-text {
