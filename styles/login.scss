@@ -1,3 +1,8 @@
+$brown: hsl(27, 51%, 75%);
+$tan: hsl(22, 67%, 90%);
+$blue: hsl(188, 51%, 75%);
+$purple: hsl(262, 44%, 66%);
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -9,9 +14,9 @@ body {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  background-color: hsl(22, 67%, 90%);
+  background-color: $tan;
 }
 
 .container {
-  background-color: hsl(188, 51%, 75%);
-}/*# sourceMappingURL=login.css.map */
+  background-color: $blue;
+}
