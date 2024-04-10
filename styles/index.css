@@ -2,6 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-size: 62.5%;
 }
 
 body {
@@ -10,6 +11,7 @@ body {
   font-weight: 400;
   font-style: normal;
   background-color: hsl(22, 67%, 90%);
+  font-size: 6.25rem;
 }
 
 #grid-container {
@@ -31,32 +33,34 @@ header {
 }
 
 #logo {
-  height: 5rem;
+  height: 9rem;
   width: auto;
 }
 
 nav {
   display: flex;
   align-items: center;
-  gap: 3rem;
-  margin-left: 1rem;
+  gap: 5rem;
+  margin-left: 2rem;
+  margin-right: 5rem;
   flex-shrink: 0;
+  font-size: 3rem;
 }
 
 .sign-in {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 2.5rem;
   margin-right: 1rem;
-  margin-left: 3rem;
   flex-shrink: 0;
+  font-size: 5rem;
 }
 
 main {
   grid-area: intro;
-  border-right: 2rem solid hsl(27, 51%, 75%);
-  border-left: 2rem solid hsl(27, 51%, 75%);
-  border-bottom: 2rem solid hsl(27, 51%, 75%);
+  border-right: 5rem solid hsl(27, 51%, 75%);
+  border-left: 5rem solid hsl(27, 51%, 75%);
+  border-bottom: 5rem solid hsl(27, 51%, 75%);
   padding: 5%;
   overflow: auto;
 }
@@ -75,9 +79,9 @@ a:active {
 button {
   background-color: hsl(188, 51%, 75%);
   border: transparent;
-  border-radius: 0.5rem;
+  border-radius: 1rem;
   font-family: "Roboto Mono", monospace;
-  padding: 0.5rem 0.6rem;
+  padding: 1rem;
 }
 button:hover {
   background-color: hsl(262, 50%, 75%);
@@ -88,21 +92,22 @@ button:active {
 }
 
 main h1 {
-  padding: 0.25rem 0 1.5rem;
-  font-size: 2rem;
+  padding: 0.25em 0 0.5em;
+  font-size: 1.5em;
   font-weight: 450;
 }
-main span {
-  font-size: 2rem;
+main h1 span {
+  font-size: 1em;
   font-weight: 450;
 }
 main p {
   padding-bottom: 1.5rem;
-  line-height: 1.5rem;
+  line-height: 3rem;
 }
 main button {
-  font-size: 1.1rem;
-  margin: 0.25rem;
+  font-size: 2rem;
+  margin: 0.75rem;
+  margin-left: 0;
 }
 
 .purple-text {

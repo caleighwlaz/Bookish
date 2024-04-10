@@ -7,6 +7,7 @@ $purple: hsl(262, 44%, 66%);
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-size: 62.5%;
 }
 
 body {
@@ -15,6 +16,7 @@ body {
   font-weight: 400;
   font-style: normal;
   background-color: $tan;
+  font-size: 6.25rem;
 }
 
 #grid-container {
@@ -38,32 +40,34 @@ header {
 }
 
 #logo {
-  height: 5rem;
+  height: 9rem;
   width: auto;
 }
 
 nav {
   display: flex;
   align-items: center;
-  gap: 3rem;
-  margin-left: 1rem;
+  gap: 5rem;
+  margin-left: 2rem;
+  margin-right: 5rem;
   flex-shrink: 0;
+  font-size: 3rem;
 }
 
 .sign-in {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 2.5rem;
   margin-right: 1rem;
-  margin-left: 3rem;
   flex-shrink: 0;
+  font-size: 5rem;
 }
 
 main {
   grid-area: intro;
-  border-right: 2rem solid $brown;
-  border-left: 2rem solid $brown;
-  border-bottom: 2rem solid $brown;
+  border-right: 5rem solid $brown;
+  border-left: 5rem solid $brown;
+  border-bottom: 5rem solid $brown;
   padding: 5%;
   overflow: auto;
 }
@@ -82,9 +86,9 @@ a {
 button {
   background-color: $blue;
   border: transparent;
-  border-radius: 0.5rem;
+  border-radius: 1rem;
   font-family: "Roboto Mono", monospace;
-  padding: 0.5rem 0.6rem;
+  padding: 1rem;
   &:hover {
     background-color: hsl(262, 50%, 75%);
     transition: 1s;
@@ -96,21 +100,22 @@ button {
 
 main {
   h1 {
-    padding: 0.25rem 0 1.5rem;
-    font-size: 2rem;
+    padding: 0.25em 0 0.5em;
+    font-size: 1.5em;
     font-weight: 450;
-  }
-  span {
-    font-size: 2rem;
-    font-weight: 450;
+    span {
+      font-size: 1em;
+      font-weight: 450;
+    }
   }
   p {
     padding-bottom: 1.5rem;
-    line-height: 1.5rem;
+    line-height: 3rem;
   }
   button {
-    font-size: 1.1rem;
-    margin: 0.25rem;
+    font-size: 2rem;
+    margin: 0.75rem;
+    margin-left: 0;
   }
 }
 
