@@ -2,6 +2,11 @@ $brown: hsl(27, 51%, 75%);
 $tan: hsl(22, 67%, 90%);
 $blue: hsl(188, 51%, 75%);
 $purple: hsl(262, 44%, 66%);
+$bar-width: 5rem;
+$bar-height: 0.5rem;
+$hamburger-gap: 1rem;
+$hamburger-margin: 2rem;
+$animation-timing: 200ms ease-in-out;
 
 * {
   box-sizing: border-box;
@@ -16,7 +21,7 @@ body {
   font-weight: 400;
   font-style: normal;
   background-color: $tan;
-  font-size: 6.25rem;
+  font-size: 6rem;
 }
 
 #grid-container {
@@ -40,7 +45,7 @@ header {
 }
 
 #logo {
-  height: 8rem;
+  height: 7rem;
   width: auto;
 }
 
@@ -127,6 +132,38 @@ main {
   color: hsl(188, 51%, 65%);
 }
 
+.hamburger-menu{
+  display:flex;
+  flex-direction: column;
+  gap: $hamburger-gap;
+  width: max-content;
+  position: absolute;
+  top: $hamburger-margin;
+  right: $hamburger-margin;
+  z-index: 2;
+  cursor: pointer;
+  &:before,
+  &:after,
+  input{
+    content: "";
+    width: $bar-width;
+    height: $bar-height;
+    background-color: black;
+    border-radius: 9999px;
+    transition: opacity $animation-timing, width $animation-timing;
+  }
+  input{
+    appearance: none;
+    padding: 0;
+    margin:0;
+    outline: none;
+    pointer-events: none;
+    &:checked{
+      opacity: 0;
+      width: 0;
+    }
+  }
+}
 @media (max-width: 1040px) {
   /*add hamburger menu*/
 }
