@@ -129,14 +129,15 @@ main button {
   z-index: 2;
   cursor: pointer;
 }
-.hamburger-menu:before, .hamburger-menu:after,
+.hamburger-menu::before, .hamburger-menu::after,
 .hamburger-menu input {
   content: "";
   width: 5rem;
   height: 0.5rem;
   background-color: black;
   border-radius: 9999px;
-  transition: opacity 200ms ease-in-out, width 200ms ease-in-out;
+  transform-origin: left center;
+  transition: opacity 200ms ease-in-out, width 200ms ease-in-out, rotate 200ms ease-in-out, translate 200ms ease-in-out, background-color;
 }
 .hamburger-menu input {
   appearance: none;
@@ -148,6 +149,16 @@ main button {
 .hamburger-menu input:checked {
   opacity: 0;
   width: 0;
+}
+.hamburger-menu:has(input:checked)::before {
+  rotate: 45deg;
+  width: 4.9497474683rem;
+  translate: 0 -0.25rem;
+}
+.hamburger-menu:has(input:checked)::after {
+  rotate: -45deg;
+  width: 4.9497474683rem;
+  translate: 0 0.25rem;
 }
 
 @media (max-width: 1040px) {
