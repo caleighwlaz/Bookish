@@ -106,8 +106,7 @@ main p {
 }
 main button {
   font-size: 2rem;
-  margin: 0.75rem;
-  margin-left: 0;
+  margin: 0.75rem 0;
 }
 
 .purple-text {
@@ -135,9 +134,9 @@ main button {
   width: 5rem;
   height: 0.5rem;
   background-color: black;
-  border-radius: 9999px;
+  border-radius: 1rem;
   transform-origin: left center;
-  transition: opacity 200ms ease-in-out, width 200ms ease-in-out, rotate 200ms ease-in-out, translate 200ms ease-in-out, background-color;
+  transition: opacity 100ms ease-in-out, width 100ms ease-in-out, rotate 100ms ease-in-out, translate 100ms ease-in-out, background-color 100ms ease-in-out;
 }
 .hamburger-menu input {
   appearance: none;
@@ -159,6 +158,31 @@ main button {
   rotate: -45deg;
   width: 4.9497474683rem;
   translate: 0 0.25rem;
+}
+.hamburger-menu:has(input:focus-visible)::before, .hamburger-menu:has(input:focus-visible)::after,
+.hamburger-menu input:focus-visible {
+  border: 1px solid hsl(27, 51%, 75%);
+  box-shadow: 0 0 0 1px hsl(188, 51%, 75%);
+}
+
+.sidebar {
+  position: absolute;
+  right: 0;
+  transition: translate 100ms ease-in-out;
+  translate: 100%;
+  padding: calc(3.5rem + hamburger-margin + 1rem) 10rem 0;
+  background-color: hsl(188, 51%, 75%);
+  color: white;
+  max-width: 10rem;
+  min-height: 100vh;
+}
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.hamburger-menu:has(input:checked) + .sidebar {
+  translate: 0;
 }
 
 @media (max-width: 1040px) {

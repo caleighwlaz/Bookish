@@ -6,7 +6,7 @@ $bar-width: 5rem;
 $bar-height: 0.5rem;
 $hamburger-gap: 1rem;
 $hamburger-margin: 2rem;
-$animation-timing: 200ms ease-in-out;
+$animation-timing: 100ms ease-in-out;
 $hamburger-height: calc($bar-height * 3 + $hamburger-gap * 2);
 
 * {
@@ -120,8 +120,7 @@ main {
   }
   button {
     font-size: 2rem;
-    margin: 0.75rem;
-    margin-left: 0;
+    margin: 0.75rem 0;
   }
 }
 
@@ -151,11 +150,11 @@ main {
     width: $bar-width;
     height: $bar-height;
     background-color: black;
-    border-radius: 9999px;
+    border-radius: 1rem;
     transform-origin: left center;
     transition: opacity $animation-timing, width $animation-timing,
                 rotate $animation-timing, translate $animation-timing,
-                background-color $animtion-timing;
+                background-color $animation-timing;
   }
   input {
     appearance: none;
@@ -189,14 +188,20 @@ main {
 }
 
 .sidebar {
+  position: absolute;
+  right: 0;
   transition: translate $animation-timing;
-  translate: -100%;
-  padding: 0.5rem 1rem;
-  padding-top: calc($hamburger-height + hamburger-margin +1rem);
+  translate: 100%;
+  padding: calc($hamburger-height + hamburger-margin + 1rem) 10rem 0;
+  
   background-color: $blue;
   color: white;
   max-width: 10rem;
   min-height: 100vh;
+  nav {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .hamburger-menu:has(input:checked) + .sidebar {
