@@ -12,6 +12,7 @@ body {
   font-style: normal;
   background-color: hsl(22, 67%, 90%);
   font-size: 6rem;
+  overflow-x: hidden;
 }
 
 #grid-container {
@@ -41,17 +42,16 @@ nav {
   display: flex;
   align-items: center;
   gap: 5rem;
-  margin-left: 2rem;
+  margin-left: 3rem;
   margin-right: 5rem;
   flex-shrink: 0;
   font-size: 3rem;
 }
 
-.sign-in {
+.buttons {
   display: flex;
   align-items: center;
   gap: 2.5rem;
-  margin-right: 1rem;
   flex-shrink: 0;
   font-size: 4.5rem;
 }
@@ -104,9 +104,12 @@ main p {
   padding-bottom: 1.5rem;
   line-height: 3rem;
 }
+main .sign-in {
+  font-size: 0;
+}
 main button {
   font-size: 2rem;
-  margin: 0.75rem 0;
+  margin: 0.75rem 1rem;
 }
 
 .purple-text {
@@ -118,13 +121,11 @@ main button {
 }
 
 .hamburger-menu {
+  margin-right: 3rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
   width: max-content;
-  position: absolute;
-  top: 2rem;
-  right: 2rem;
   z-index: 2;
   cursor: pointer;
 }
@@ -136,7 +137,8 @@ main button {
   background-color: black;
   border-radius: 1rem;
   transform-origin: left center;
-  transition: opacity 100ms ease-in-out, width 100ms ease-in-out, rotate 100ms ease-in-out, translate 100ms ease-in-out, background-color 100ms ease-in-out;
+  transition: opacity 200ms ease-in-out, width 200ms ease-in-out, rotate 200ms ease-in-out, translate 200ms ease-in-out, background-color 200ms ease-in-out;
+  display: none;
 }
 .hamburger-menu input {
   appearance: none;
@@ -168,9 +170,10 @@ main button {
 .sidebar {
   position: absolute;
   right: 0;
-  transition: translate 100ms ease-in-out;
+  bottom: 0;
+  padding: 8.5rem 2rem 3rem;
+  transition: translate 200ms ease-in-out;
   translate: 100%;
-  padding: calc(3.5rem + hamburger-margin + 1rem) 10rem 0;
   background-color: hsl(188, 51%, 75%);
   color: white;
   max-width: 10rem;
@@ -185,6 +188,12 @@ main button {
   translate: 0;
 }
 
-@media (max-width: 1040px) {
-  /*add hamburger menu*/
+@media (max-width: 1240px) {
+  .nav-link {
+    display: none;
+  }
+  .hamburger-menu::before, .hamburger-menu::after,
+  .hamburger-menu input {
+    display: inline;
+  }
 }/*# sourceMappingURL=index.css.map */

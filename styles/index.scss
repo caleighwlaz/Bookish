@@ -6,7 +6,7 @@ $bar-width: 5rem;
 $bar-height: 0.5rem;
 $hamburger-gap: 1rem;
 $hamburger-margin: 2rem;
-$animation-timing: 100ms ease-in-out;
+$animation-timing: 200ms ease-in-out;
 $hamburger-height: calc($bar-height * 3 + $hamburger-gap * 2);
 
 * {
@@ -23,6 +23,7 @@ body {
   font-style: normal;
   background-color: $tan;
   font-size: 6rem;
+  overflow-x: hidden;
 }
 
 #grid-container {
@@ -54,17 +55,16 @@ nav {
   display: flex;
   align-items: center;
   gap: 5rem;
-  margin-left: 2rem;
+  margin-left: 3rem;
   margin-right: 5rem;
   flex-shrink: 0;
   font-size: 3rem;
 }
 
-.sign-in {
+.buttons {
   display: flex;
   align-items: center;
   gap: 2.5rem;
-  margin-right: 1rem;
   flex-shrink: 0;
   font-size: 4.5rem;
 }
@@ -118,9 +118,12 @@ main {
     padding-bottom: 1.5rem;
     line-height: 3rem;
   }
+  .sign-in {
+    font-size: 0;
+  }
   button {
     font-size: 2rem;
-    margin: 0.75rem 0;
+    margin: 0.75rem 1rem;
   }
 }
 
@@ -134,13 +137,11 @@ main {
 
 .hamburger-menu {
   $x-width: calc($hamburger-height * 1.41421356237);
+  margin-right: 3rem;
   display:flex;
   flex-direction: column;
   gap: $hamburger-gap;
   width: max-content;
-  position: absolute;
-  top: $hamburger-margin;
-  right: $hamburger-margin;
   z-index: 2;
   cursor: pointer;
   &::before,
@@ -155,6 +156,7 @@ main {
     transition: opacity $animation-timing, width $animation-timing,
                 rotate $animation-timing, translate $animation-timing,
                 background-color $animation-timing;
+    display: none;
   }
   input {
     appearance: none;
@@ -190,10 +192,10 @@ main {
 .sidebar {
   position: absolute;
   right: 0;
+  bottom: 0;
+  padding: calc($hamburger-height + $hamburger-margin + 3rem) 2rem 3rem;
   transition: translate $animation-timing;
   translate: 100%;
-  padding: calc($hamburger-height + hamburger-margin + 1rem) 10rem 0;
-  
   background-color: $blue;
   color: white;
   max-width: 10rem;
@@ -207,6 +209,15 @@ main {
 .hamburger-menu:has(input:checked) + .sidebar {
   translate: 0;
 }
-@media (max-width: 1040px) {
-  /*add hamburger menu*/
+@media (max-width: 1240px) {
+  .nav-link {
+    display: none;
+  }
+  .hamburger-menu {
+    &::before,
+    &::after,
+    input {
+      display: inline;
+    }
+  }
 }
