@@ -184,8 +184,8 @@ main {
   &:has(input:focus-visible)::before,
   &:has(input:focus-visible)::after,
   input:focus-visible {
-    border: 1px solid $brown;
-    box-shadow: 0 0 0 1px $blue;
+    border: 1px solid white;
+    box-shadow: 0 0 0 1px black;
   }
 }
 
