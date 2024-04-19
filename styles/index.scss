@@ -31,9 +31,9 @@ body {
   grid-template-areas:
     "header header"
     "intro .";
-  grid-template-rows: 1fr 7fr;
+  grid-template-rows: 12.5vh 7fr;
   grid-template-columns: 4fr 5fr;
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
 }
 
@@ -43,7 +43,6 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  overflow: auto;
 }
 
 #logo {
@@ -75,7 +74,6 @@ main {
   border-left: 5rem solid $brown;
   border-bottom: 5rem solid $brown;
   padding: 5%;
-  overflow: auto;
 }
 
 a {
@@ -106,7 +104,7 @@ button {
 
 main {
   h1 {
-    padding: 0 0 0.5em;
+    padding: 0 0 2rem;
     font-size: 1.4em;
     font-weight: 450;
     span {
@@ -193,7 +191,6 @@ main {
   position: absolute;
   right: 0;
   bottom: 0;
-  padding: calc($hamburger-height + $hamburger-margin + 3rem) 2rem 3rem;
   transition: translate $animation-timing;
   translate: 100%;
   background-color: $blue;
@@ -203,12 +200,32 @@ main {
   nav {
     display: flex;
     flex-direction: column;
+    height: 100vh;
+    padding: calc($hamburger-height + $hamburger-margin + 4rem) 0;
+    justify-content: space-between;
+    .sidebar-link {
+      max-width: 10rem;
+      font-size: 3rem;
+      &:hover {
+        background-color: hsl(262, 50%, 75%);
+        transition: 1s;
+      }
+      a {
+        &:hover {
+          color: black;
+        }
+        &:active {
+          text-decoration: underline;
+        }
+      }
+    }
   }
 }
 
 .hamburger-menu:has(input:checked) + .sidebar {
   translate: 0;
 }
+
 @media (max-width: 1240px) {
   .nav-link {
     display: none;
@@ -219,5 +236,28 @@ main {
     input {
       display: inline;
     }
+  }
+}
+
+@media (max-width: 1200px) {
+  * {
+    font-size: 60%;
+  }
+}
+
+@media (max-width: 1048px) {
+  * {
+    font-size: 57.5%;
+  }
+}
+
+@media (max-width: 896px) {
+  #grid-container {
+    display: block;
+    height: 100vh;
+    width: 100vw;
+  }
+  * {
+    font-size: 57.5%;
   }
 }
