@@ -191,12 +191,13 @@ button {
   translate: 0;
 }
 
-.card {
+main {
   position: absolute;
-  width: 70%;
+  width: 35%;
   height: 80%;
-  background-color: $blue;
-  border-radius: 0.5rem;
+  background-color: $purple;
+  border: 0.5rem solid $brown;
+  border-radius: 1.25rem;
   box-shadow: 0.5rem 0.5rem 1rem 0 hsla(27, 51%, 75%, 0.5);
   margin-left: auto;
   margin-right: auto;
@@ -204,7 +205,51 @@ button {
   right: 0;
   top: 16.5vh;
   text-align: center;
+  color: white;
+  font-size: 3.5rem;
+  line-height: 4rem;
+  padding: 4rem 2rem;
+  h1 {
+    font-size: 1.5em;
+    padding-bottom: 2rem;
+  }
+  p {
+    padding-top: 0;
+  }
 }
+
+.creator-card {
+  position: absolute;
+  width: 27.5%;
+  height: 80%;
+  background-color: $blue;
+  border: 0.5rem solid $brown;
+  border-radius: 1.25rem;
+  box-shadow: 0.5rem 0.5rem 1rem 0 hsla(27, 51%, 75%, 0.5);
+  margin-left: auto;
+  margin-right: auto;
+  top: 16.5vh;
+  text-align: center;
+  font-size: 5rem;
+  line-height: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+    a {
+      font-size: 0.75em;
+      margin: 1rem 0;
+    }
+    button {
+      background-color: $purple;
+    }
+    &#malia {
+      left: 3vw;
+    }
+    &#caleigh {
+      right: 3vw;
+    }
+  }
+
 
 @media (max-width: 1240px) {
   .nav-link {
