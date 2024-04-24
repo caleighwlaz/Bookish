@@ -17,8 +17,9 @@ body {
 
 #grid-container {
   display: grid;
-  grid-template-areas: "header" ".";
+  grid-template-areas: "header header header" "malia overview caleigh";
   grid-template-rows: 1fr 7fr;
+  grid-template-columns: 1fr 2fr 1fr;
   height: 100vh;
   width: 100vw;
 }
@@ -170,26 +171,21 @@ button:active {
 }
 
 main {
-  position: absolute;
-  width: 35%;
-  height: 80%;
+  grid-area: overview;
   background-color: hsl(262, 44%, 66%);
   border: 0.5rem solid hsl(27, 51%, 75%);
   border-radius: 1.25rem;
   box-shadow: 0.5rem 0.5rem 1rem 0 hsla(27, 51%, 75%, 0.5);
   margin-left: auto;
   margin-right: auto;
-  left: 0;
-  right: 0;
-  top: 16.5vh;
   text-align: center;
   color: white;
-  font-size: 3.5rem;
-  line-height: 4rem;
+  font-size: calc(1.25vw + 2vh);
+  line-height: 125%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0 2rem;
+  padding: 0 1rem;
 }
 main h1 {
   font-size: 1.5em;
@@ -211,7 +207,7 @@ main p {
   margin-right: auto;
   top: 16.5vh;
   text-align: center;
-  font-size: 5rem;
+  font-size: calc(2vw + 3.5vh);
   line-height: 4rem;
   display: flex;
   flex-direction: column;
@@ -223,12 +219,20 @@ main p {
 }
 .creator-card button {
   background-color: hsl(262, 44%, 66%);
+  border: 0.2rem solid white;
+}
+.creator-card button:hover {
+  background-color: hsl(262, 50%, 85%);
+  transition: 1s;
+}
+.creator-card button:active {
+  text-decoration: underline;
 }
 .creator-card#malia {
-  left: 3vw;
+  grid-area: malia;
 }
 .creator-card#caleigh {
-  right: 3vw;
+  grid-area: caleigh;
 }
 
 @media (max-width: 1240px) {
