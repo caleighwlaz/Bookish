@@ -194,12 +194,13 @@ button {
 
 main {
   grid-area: overview;
+  align-self: center;
+  height: 85%;
   background-color: $purple;
   border: 0.5rem solid $brown;
   border-radius: 1.25rem;
   box-shadow: 0.5rem 0.5rem 1rem 0 hsla(27, 51%, 75%, 0.5);
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 3vw;
   text-align: center;
   color: white;
   font-size: calc(1.25vw + 2vh);
@@ -218,16 +219,21 @@ main {
 }
 
 .creator-card {
-  position: absolute;
-  width: 27.5%;
-  height: 80%;
+  &#malia {
+    grid-area: malia;
+    align-self: center;
+    margin-left: 3vw;
+  }
+  &#caleigh {
+    grid-area: caleigh;
+    align-self: center;
+    margin-right: 3vw;
+  }
+  height: 85%;
   background-color: $blue;
   border: 0.5rem solid $brown;
   border-radius: 1.25rem;
   box-shadow: 0.5rem 0.5rem 1rem 0 hsla(27, 51%, 75%, 0.5);
-  margin-left: auto;
-  margin-right: auto;
-  top: 16.5vh;
   text-align: center;
   font-size: calc(2vw + 3.5vh);
   line-height: 4rem;
@@ -249,11 +255,8 @@ main {
         text-decoration: underline;
       }
     }
-    &#malia {
-      grid-area: malia;
-    }
-    &#caleigh {
-      grid-area: caleigh;
+    p {
+      margin-bottom: 1vh;
     }
   }
 
@@ -283,7 +286,7 @@ main {
   }
 }
 
-@media (max-width: 896px) {
+/*@media (max-width: 896px) {
   #grid-container {
     display: block;
     height: 100vh;
@@ -292,4 +295,4 @@ main {
   * {
     font-size: 57.5%;
   }
-}
+}*/

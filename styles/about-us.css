@@ -91,6 +91,7 @@ button:active {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  width: -moz-max-content;
   width: max-content;
   z-index: 2;
   cursor: pointer;
@@ -107,7 +108,9 @@ button:active {
   display: none;
 }
 .hamburger-menu input {
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   padding: 0;
   margin: 0;
   outline: none;
@@ -172,12 +175,13 @@ button:active {
 
 main {
   grid-area: overview;
+  align-self: center;
+  height: 85%;
   background-color: hsl(262, 44%, 66%);
   border: 0.5rem solid hsl(27, 51%, 75%);
   border-radius: 1.25rem;
   box-shadow: 0.5rem 0.5rem 1rem 0 hsla(27, 51%, 75%, 0.5);
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 3vw;
   text-align: center;
   color: white;
   font-size: calc(1.25vw + 2vh);
@@ -196,22 +200,27 @@ main p {
 }
 
 .creator-card {
-  position: absolute;
-  width: 27.5%;
-  height: 80%;
+  height: 85%;
   background-color: hsl(188, 51%, 75%);
   border: 0.5rem solid hsl(27, 51%, 75%);
   border-radius: 1.25rem;
   box-shadow: 0.5rem 0.5rem 1rem 0 hsla(27, 51%, 75%, 0.5);
-  margin-left: auto;
-  margin-right: auto;
-  top: 16.5vh;
   text-align: center;
   font-size: calc(2vw + 3.5vh);
   line-height: 4rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+.creator-card#malia {
+  grid-area: malia;
+  align-self: center;
+  margin-left: 3vw;
+}
+.creator-card#caleigh {
+  grid-area: caleigh;
+  align-self: center;
+  margin-right: 3vw;
 }
 .creator-card a {
   font-size: 0.75em;
@@ -228,11 +237,8 @@ main p {
 .creator-card button:active {
   text-decoration: underline;
 }
-.creator-card#malia {
-  grid-area: malia;
-}
-.creator-card#caleigh {
-  grid-area: caleigh;
+.creator-card p {
+  margin-bottom: 1vh;
 }
 
 @media (max-width: 1240px) {
@@ -254,7 +260,7 @@ main p {
     font-size: 57.5%;
   }
 }
-@media (max-width: 896px) {
+/*@media (max-width: 896px) {
   #grid-container {
     display: block;
     height: 100vh;
@@ -263,4 +269,4 @@ main p {
   * {
     font-size: 57.5%;
   }
-}/*# sourceMappingURL=about-us.css.map */
+}*//*# sourceMappingURL=about-us.css.map */
