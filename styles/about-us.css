@@ -91,7 +91,6 @@ button:active {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  width: -moz-max-content;
   width: max-content;
   z-index: 2;
   cursor: pointer;
@@ -108,9 +107,7 @@ button:active {
   display: none;
 }
 .hamburger-menu input {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
   padding: 0;
   margin: 0;
   outline: none;
@@ -180,7 +177,7 @@ main {
   background-color: hsl(262, 44%, 66%);
   border: 0.5rem solid hsl(27, 51%, 75%);
   border-radius: 1.25rem;
-  box-shadow: 0.5rem 0.5rem 1rem 0 hsla(27, 51%, 75%, 0.5);
+  box-shadow: 0.75rem 0.75rem 1rem 0 hsla(27, 51%, 75%, 0.5);
   margin: 0 3vw;
   text-align: center;
   color: white;
@@ -204,7 +201,7 @@ main p {
   background-color: hsl(188, 51%, 75%);
   border: 0.5rem solid hsl(27, 51%, 75%);
   border-radius: 1.25rem;
-  box-shadow: 0.5rem 0.5rem 1rem 0 hsla(27, 51%, 75%, 0.5);
+  box-shadow: 0.75rem 0.75rem 1rem 0 hsla(27, 51%, 75%, 0.5);
   text-align: center;
   font-size: calc(2vw + 3.5vh);
   line-height: 4rem;

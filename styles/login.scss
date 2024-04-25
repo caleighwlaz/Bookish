@@ -197,13 +197,56 @@ button {
   height: 70%;
   background-color: $blue;
   border-radius: 0.5rem;
-  box-shadow: 0.5rem 0.5rem 1rem 0 hsla(27, 51%, 75%, 0.5);
+  box-shadow: 0 0 2rem 0.5rem hsla(27, 51%, 75%, 0.5);
   margin-left: auto;
   margin-right: auto;
   left: 0;
   right: 0;
   top: 20vh;
-  text-align: center;
+  padding: 3vh 3vw;
+  form {
+    line-height: 75%;
+    font-size: calc(2.5vw + 2.5vh);
+    h1 {
+      text-align: center;
+    }
+    button {
+      background-color: $purple;
+      border-radius: 0.5rem;
+      &:hover {
+        background-color: white;
+        transition: 1s;
+      }
+      &:active {
+        text-decoration: underline;
+      }
+    }
+    p {
+      a {
+        font-size: 1em;
+        color: $purple;
+        &:hover {
+          color: white;
+          transition: 1s;
+        }
+        &:active {
+          text-decoration: underline;
+        }
+      }
+    }
+    .input-box {
+      width: 100%;
+      height: 10%;
+      margin: 1rem 0;
+      input {
+        width: 100%;
+        height: 100%
+      }
+      i {
+        position: absolute;
+      }
+    }
+  }
 }
 
 @media (max-width: 1240px) {
