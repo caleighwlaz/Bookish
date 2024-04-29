@@ -48,12 +48,12 @@ nav {
   font-size: 3rem;
 }
 
-.buttons {
+.header-login-area {
   display: flex;
   align-items: center;
   gap: 2.5rem;
   flex-shrink: 0;
-  font-size: 4.5rem;
+  font-size: 3rem;
 }
 
 main {
@@ -65,30 +65,9 @@ main {
   background-color: hsl(22, 67%, 90%);
 }
 
-a {
-  color: black;
-  text-decoration: none;
-}
-a:hover {
-  color: hsl(262, 90%, 75%);
-}
-a:active {
-  text-decoration: underline;
-}
-
-button {
-  background-color: hsl(188, 51%, 75%);
-  border: transparent;
-  border-radius: 1rem;
-  font-family: "Roboto Mono", monospace;
-  padding: 1rem;
-}
-button:hover {
-  background-color: hsl(262, 50%, 75%);
-  transition: 1s;
-}
-button:active {
-  text-decoration: underline;
+.main-login-area {
+  font-size: 3rem;
+  margin: 1.5rem 1rem;
 }
 
 main h1 {
@@ -104,12 +83,20 @@ main p {
   padding-bottom: 1.5rem;
   line-height: 3rem;
 }
-main .sign-in {
-  font-size: 0;
-}
 main button {
   font-size: 2rem;
   margin: 1.5rem 1rem;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+a:hover {
+  color: hsl(262, 90%, 75%);
+}
+a:active {
+  text-decoration: underline;
 }
 
 .purple-text {
@@ -118,6 +105,23 @@ main button {
 
 .blue-text {
   color: hsl(188, 51%, 65%);
+}
+
+.sign-up,
+.login {
+  background-color: hsl(188, 51%, 75%);
+  border-radius: 0.75rem;
+  padding: 0.75rem;
+}
+.sign-up:hover,
+.login:hover {
+  color: black;
+  background-color: hsl(262, 50%, 75%);
+  transition: 1s;
+}
+.sign-up:active,
+.login:active {
+  text-decoration: underline;
 }
 
 .hamburger-menu {

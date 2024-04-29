@@ -184,8 +184,10 @@ button:active {
   padding: 3vh 3vw;
 }
 .card form {
+  display: flex;
+  flex-direction: column;
+  font-size: calc(3vw + 1vh);
   line-height: 75%;
-  font-size: calc(2.5vw + 2.5vh);
 }
 .card form h1 {
   text-align: center;
@@ -195,7 +197,7 @@ button:active {
   border-radius: 0.5rem;
 }
 .card form button:hover {
-  background-color: white;
+  background-color: hsl(262, 40%, 55%);
   transition: 1s;
 }
 .card form button:active {
@@ -206,7 +208,7 @@ button:active {
   color: hsl(262, 44%, 66%);
 }
 .card form p a:hover {
-  color: white;
+  color: hsl(262, 50%, 80%);
   transition: 1s;
 }
 .card form p a:active {
@@ -215,10 +217,16 @@ button:active {
 .card form .input-box {
   width: 100%;
   margin: 1rem 0;
+  position: relative;
 }
 .card form .input-box input {
   width: 100%;
   height: 4vh;
+}
+.card form .input-box i {
+  position: absolute;
+  top: 70%;
+  right: 1.5%;
 }
 .card form .remember-me {
   accent-color: hsl(262, 44%, 66%);

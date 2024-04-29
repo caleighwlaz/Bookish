@@ -61,12 +61,12 @@ nav {
   font-size: 3rem;
 }
 
-.buttons {
+.header-login-area {
   display: flex;
   align-items: center;
   gap: 2.5rem;
   flex-shrink: 0;
-  font-size: 4.5rem;
+  font-size: 3rem;
 }
 
 main {
@@ -78,30 +78,9 @@ main {
   background-color: $tan;
 }
 
-a {
-  color: black;
-  text-decoration: none;
-  &:hover {
-    color: hsl(262, 90%, 75%);
-  }
-  &:active {
-    text-decoration: underline;
-  }
-}
-
-button {
-  background-color: $blue;
-  border: transparent;
-  border-radius: 1rem;
-  font-family: "Roboto Mono", monospace;
-  padding: 1rem;
-  &:hover {
-    background-color: hsl(262, 50%, 75%);
-    transition: 1s;
-  }
-  &:active {
-    text-decoration: underline;
-  }
+.main-login-area {
+  font-size: 3rem;
+  margin: 1.5rem 1rem;
 }
 
 main {
@@ -118,12 +97,20 @@ main {
     padding-bottom: 1.5rem;
     line-height: 3rem;
   }
-  .sign-in {
-    font-size: 0;
-  }
   button {
     font-size: 2rem;
     margin: 1.5rem 1rem;
+  }
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  &:hover {
+    color: hsl(262, 90%, 75%);
+  }
+  &:active {
+    text-decoration: underline;
   }
 }
 
@@ -133,6 +120,21 @@ main {
 
 .blue-text {
   color: hsl(188, 51%, 65%);
+}
+
+.sign-up,
+.login {
+  background-color: $blue;
+  border-radius: 0.75rem;
+  padding: 0.75rem;
+  &:hover {
+    color: black;
+    background-color: hsl(262, 50%, 75%);
+    transition: 1s;
+  }
+  &:active {
+    text-decoration: underline;
+  }
 }
 
 .hamburger-menu {
