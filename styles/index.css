@@ -178,30 +178,23 @@ a:active {
   transition: translate 200ms ease-in-out;
   translate: 100%;
   background-color: hsl(188, 51%, 75%);
-  color: white;
-  max-width: 10rem;
+  width: 8.75rem;
   min-height: 100vh;
 }
 .sidebar nav {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
   padding: 9.5rem 0;
-  justify-content: space-between;
 }
 .sidebar nav .sidebar-link {
-  max-width: 10rem;
-  font-size: 3rem;
+  width: 8.75rem;
+  font-size: 2rem;
 }
 .sidebar nav .sidebar-link:hover {
   background-color: hsl(262, 50%, 75%);
   transition: 1s;
-}
-.sidebar nav .sidebar-link a:hover {
   color: black;
-}
-.sidebar nav .sidebar-link a:active {
-  text-decoration: underline;
 }
 
 .hamburger-menu:has(input:checked) + .sidebar {

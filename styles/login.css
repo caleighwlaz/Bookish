@@ -219,6 +219,10 @@ button:active {
   margin: 1rem 0;
   position: relative;
 }
+.card form .input-box label {
+  position: relative;
+  top: 1rem;
+}
 .card form .input-box input {
   width: 100%;
   height: 4vh;
@@ -230,6 +234,11 @@ button:active {
 }
 .card form .remember-me {
   accent-color: hsl(262, 44%, 66%);
+}
+
+input[type=checkbox] {
+  transform: scale(2);
+  margin: 2rem 0 2rem 0.5vw;
 }
 
 @media (max-width: 1240px) {

@@ -198,29 +198,20 @@ a {
   transition: translate $animation-timing;
   translate: 100%;
   background-color: $blue;
-  color: white;
-  max-width: 10rem;
+  width: calc(1.75 * $bar-width);
   min-height: 100vh;
   nav {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    min-height: 100vh;
     padding: calc($hamburger-height + $hamburger-margin + 4rem) 0;
-    justify-content: space-between;
     .sidebar-link {
-      max-width: 10rem;
-      font-size: 3rem;
+      width: calc(1.75 * $bar-width);
+      font-size: 2rem;
       &:hover {
         background-color: hsl(262, 50%, 75%);
         transition: 1s;
-      }
-      a {
-        &:hover {
-          color: black;
-        }
-        &:active {
-          text-decoration: underline;
-        }
+        color: black;
       }
     }
   }
