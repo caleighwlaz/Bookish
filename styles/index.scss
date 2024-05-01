@@ -140,7 +140,8 @@ a {
 .hamburger-menu {
   $x-width: calc($hamburger-height * 1.41421356237);
   margin-right: 3rem;
-  display:flex;
+  margin-left: 1rem;
+  display: flex;
   flex-direction: column;
   gap: $hamburger-gap;
   width: max-content;
@@ -193,21 +194,25 @@ a {
 
 .sidebar {
   position: absolute;
+  min-height: 100vh;
   right: 0;
   bottom: 0;
   transition: translate $animation-timing;
   translate: 100%;
   background-color: $blue;
   width: calc(1.75 * $bar-width);
-  min-height: 100vh;
   nav {
+    margin: 0;
     display: flex;
     flex-direction: column;
+    gap: 0;
     min-height: 100vh;
-    padding: calc($hamburger-height + $hamburger-margin + 4rem) 0;
+    padding-top: calc($hamburger-height + $hamburger-margin + 2rem);
+    align-items: center;
     .sidebar-link {
       width: calc(1.75 * $bar-width);
       font-size: 2rem;
+      padding: 4vh 0;
       &:hover {
         background-color: hsl(262, 50%, 75%);
         transition: 1s;
@@ -219,6 +224,13 @@ a {
 
 .hamburger-menu:has(input:checked) + .sidebar {
   translate: 0;
+}
+
+@media (min-width: 1241px) {
+  .sidebar {
+    /*transition*/
+    display: none;
+  }
 }
 
 @media (max-width: 1240px) {
