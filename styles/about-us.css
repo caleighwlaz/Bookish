@@ -219,23 +219,27 @@ main p {
   align-self: center;
   margin-right: 3vw;
 }
-.creator-card a {
+.creator-card h2 {
   font-size: 0.75em;
-  margin: 1rem 0;
+  font-weight: normal;
+  line-height: 125%;
+  margin-bottom: 2vh;
 }
-.creator-card button {
+
+.github,
+.email {
   background-color: hsl(262, 44%, 66%);
   border: 0.2rem solid white;
+  border-radius: 1.5rem;
+  padding: 1rem;
+  font-size: 0.5em;
+  margin: 1.25vh 5vw;
 }
-.creator-card button:hover {
+.github:hover,
+.email:hover {
   background-color: hsl(262, 50%, 85%);
   transition: 1s;
-}
-.creator-card button:active {
-  text-decoration: underline;
-}
-.creator-card p {
-  margin-bottom: 1vh;
+  color: black;
 }
 
 @media (max-width: 1240px) {

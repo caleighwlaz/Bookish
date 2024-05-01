@@ -240,25 +240,28 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-    a {
+    h2 {
       font-size: 0.75em;
-      margin: 1rem 0;
-    }
-    button {
-      background-color: $purple;
-      border: 0.2rem solid white;
-      &:hover {
-        background-color: hsl(262, 50%, 85%);
-        transition: 1s;
-      }
-      &:active {
-        text-decoration: underline;
-      }
-    }
-    p {
-      margin-bottom: 1vh;
+      font-weight: normal;
+      line-height: 125%;
+      margin-bottom: 2vh;
     }
   }
+
+.github,
+.email {
+  background-color: $purple;
+  border: 0.2rem solid white;
+  border-radius: 1.5rem;
+  padding: 1rem;
+  font-size: 0.5em;
+  margin: 1.25vh 5vw;
+  &:hover {
+    background-color: hsl(262, 50%, 85%);
+    transition: 1s;
+    color: black;
+  }
+}
 
 
 @media (max-width: 1240px) {
