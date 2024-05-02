@@ -67,6 +67,7 @@ nav {
   gap: 2.5rem;
   flex-shrink: 0;
   font-size: 3rem;
+  margin-right: 2vw;
 }
 
 main {
@@ -139,8 +140,8 @@ a {
 
 .hamburger-menu {
   $x-width: calc($hamburger-height * 1.41421356237);
-  margin-right: 3rem;
-  margin-left: 1rem;
+  position: absolute;
+  right: 1.5vw;
   display: flex;
   flex-direction: column;
   gap: $hamburger-gap;
@@ -193,33 +194,42 @@ a {
 }
 
 .sidebar {
-  position: absolute;
   min-height: 100vh;
+  position: fixed;
   right: 0;
-  bottom: 0;
+  top: 0;
   transition: translate $animation-timing;
   translate: 100%;
   background-color: $blue;
-  width: calc(1.75 * $bar-width);
+  background-attachment: fixed;
+  width: calc(2 * $bar-width);
   nav {
     margin: 0;
     display: flex;
     flex-direction: column;
+    align-content: center;
     gap: 0;
-    min-height: 100vh;
     padding-top: calc($hamburger-height + $hamburger-margin + 2rem);
-    align-items: center;
     .sidebar-link {
       width: calc(1.75 * $bar-width);
+      text-align: center;
       font-size: 2rem;
-      padding: 4vh 0;
+      padding: 5vh 0;
+      background: linear-gradient(to right, hsl(188, 60%, 70%), hsl(188, 51%, 60%) 50%, $blue 50%);
+      background-size: 200% 100%;
+      background-position: -100%;
+      transition: background-position 275ms ease;
       &:hover {
-        background-color: hsl(262, 50%, 75%);
-        transition: 1s;
+        background-position: 0 100%;
+        transition: 0.75s;
         color: black;
       }
     }
   }
+}
+
+.hamburger-menu:has(input:checked) {
+  position: fixed;
 }
 
 .hamburger-menu:has(input:checked) + .sidebar {
@@ -228,7 +238,6 @@ a {
 
 @media (min-width: 1241px) {
   .sidebar {
-    /*transition*/
     display: none;
   }
 }
@@ -243,6 +252,9 @@ a {
     input {
       display: inline;
     }
+  }
+  .header-login-area {
+    margin-right: 11vw;
   }
 }
 
