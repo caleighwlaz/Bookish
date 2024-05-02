@@ -193,10 +193,10 @@ a:active {
   padding-top: 7.5rem;
 }
 .sidebar nav .sidebar-link {
-  width: 8.75rem;
+  width: 9rem;
   text-align: center;
   font-size: 2rem;
-  padding: 5vh 0;
+  padding: 5vh 1vw;
   background: linear-gradient(to right, hsl(188, 60%, 70%), hsl(188, 51%, 60%) 50%, hsl(188, 51%, 75%) 50%);
   background-size: 200% 100%;
   background-position: -100%;
