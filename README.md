@@ -1,5 +1,5 @@
 # Senior Capstone Project: Bookish
-Created by Malia Porter and Caleigh Wlazlowski
+Created by Malia Porter and Caleigh Wlazlowski <br>
 (date)
 
 ## About
