@@ -1,0 +1,240 @@
+$brown: hsl(27, 51%, 75%);
+$tan: hsl(22, 67%, 90%);
+$blue: hsl(188, 51%, 75%);
+$purple: hsl(262, 44%, 66%);
+$bar-width: 5rem;
+$bar-height: 0.5rem;
+$hamburger-gap: 1rem;
+$hamburger-margin: 2rem;
+$animation-timing: 200ms ease-in-out;
+$hamburger-height: calc($bar-height * 3 + $hamburger-gap * 2);
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  background-color: $purple;
+  font-size: 6rem;
+  overflow-x: hidden;
+}
+
+.background {
+  background-color: $tan;
+}
+
+header {
+  background-color: $brown;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 0.25rem 0.75rem 0 hsla(27, 51%, 35%, 0.5);
+}
+
+#logo {
+  height: 7rem;
+  width: auto;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+  margin-left: 3rem;
+  margin-right: 5rem;
+  flex-shrink: 0;
+  font-size: 3rem;
+}
+
+.header-login-area {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  flex-shrink: 0;
+  font-size: 3rem;
+  margin-right: 2vw;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  &:hover {
+    color: hsl(262, 90%, 75%);
+  }
+  &:active {
+    text-decoration: underline;
+  }
+}
+
+.purple-text {
+  color: $purple;
+}
+
+.blue-text {
+  color: hsl(188, 51%, 65%);
+}
+
+.sign-up,
+.login {
+  background-color: $blue;
+  border-radius: 0.75rem;
+  padding: 0.75rem;
+  &:hover {
+    color: black;
+    background-color: hsl(262, 50%, 75%);
+    transition: 1s;
+  }
+  &:active {
+    text-decoration: underline;
+  }
+}
+
+.hamburger-menu {
+  $x-width: calc($hamburger-height * 1.41421356237);
+  position: absolute;
+  right: 1.5vw;
+  display: flex;
+  flex-direction: column;
+  gap: $hamburger-gap;
+  width: max-content;
+  z-index: 2;
+  cursor: pointer;
+  &::before,
+  &::after,
+  input {
+    content: "";
+    width: $bar-width;
+    height: $bar-height;
+    background-color: black;
+    border-radius: 1rem;
+    transform-origin: left center;
+    transition: opacity $animation-timing, width $animation-timing,
+                rotate $animation-timing, translate $animation-timing,
+                background-color $animation-timing;
+    display: none;
+  }
+  input {
+    appearance: none;
+    padding: 0;
+    margin:0;
+    outline: none;
+    pointer-events: none;
+    &:checked {
+      opacity: 0;
+      width: 0;
+    }
+  }
+  &:has(input:checked) {
+    &::before {
+      rotate: 45deg;
+      width: $x-width;
+      translate: 0 calc($bar-height / -2);
+    }
+    &::after {
+      rotate: -45deg;
+      width: $x-width;
+      translate: 0 calc($bar-height / 2);
+    }
+  }
+  &:has(input:focus-visible)::before,
+  &:has(input:focus-visible)::after,
+  input:focus-visible {
+    border: 1px solid white;
+    box-shadow: 0 0 0 1px black;
+  }
+}
+
+.sidebar {
+  min-height: 100vh;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transition: translate $animation-timing;
+  translate: 100%;
+  background-color: $blue;
+  background-attachment: fixed;
+  width: calc(2 * $bar-width);
+  nav {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    gap: 0;
+    padding-top: calc($hamburger-height + $hamburger-margin + 2rem);
+    .sidebar-link {
+      width: calc(1.8 * $bar-width);
+      text-align: center;
+      font-size: 2rem;
+      padding: 5vh 1vw;
+      background: linear-gradient(to right, hsl(188, 60%, 70%), hsl(188, 51%, 60%) 50%, $blue 50%);
+      background-size: 200% 100%;
+      background-position: -100%;
+      transition: background-position 275ms ease;
+      &:hover {
+        background-position: 0 100%;
+        transition: 0.75s;
+        color: black;
+      }
+    }
+  }
+}
+
+.hamburger-menu:has(input:checked) {
+  position: fixed;
+}
+
+.hamburger-menu:has(input:checked) + .sidebar {
+  translate: 0;
+}
+
+@media (min-width: 1241px) {
+  .sidebar {
+    display: none;
+  }
+}
+
+@media (max-width: 1240px) {
+  .nav-link {
+    display: none;
+  }
+  .hamburger-menu {
+    &::before,
+    &::after,
+    input {
+      display: inline;
+    }
+  }
+  .header-login-area {
+    margin-right: 11vw;
+  }
+}
+
+@media (max-width: 1200px) {
+  * {
+    font-size: 60%;
+  }
+}
+
+@media (max-width: 1048px) {
+  * {
+    font-size: 57.5%;
+  }
+}
+
+@media (max-width: 896px) {
+  #grid-container {
+    display: block;
+    height: 100vh;
+    width: 100vw;
+  }
+  * {
+    font-size: 57.5%;
+  }
+}
