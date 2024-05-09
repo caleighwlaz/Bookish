@@ -27,17 +27,19 @@ header {
   right: 0;
   top: 20vh;
   padding: 3vh 3vw;
+  font-size: calc(3vw + 1vh);
+  line-height: 75%;
+  h1 {
+    text-align: center;
+  }
   form {
     display: flex;
     flex-direction: column;
-    font-size: calc(3vw + 1vh);
-    line-height: 75%;
-    h1 {
-      text-align: center;
-    }
     button {
       background-color: base.$purple;
       border-radius: 0.5rem;
+      padding: 0.5rem 0;
+      border: 0;
       &:hover {
         background-color: hsl(262, 40%, 55%);
         transition: 1s;
