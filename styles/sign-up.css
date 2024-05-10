@@ -282,4 +282,12 @@ header {
   position: absolute;
   top: 70%;
   right: 1.5%;
+}
+
+#togglepassword {
+  cursor: pointer;
+  position: absolute;
+  top: 34vh;
+  right: 4vw;
+  color: grey;
 }/*# sourceMappingURL=sign-up.css.map */

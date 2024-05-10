@@ -63,11 +63,18 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
     h2 {
       font-size: 0.75em;
       font-weight: normal;
       line-height: 125%;
-      margin-bottom: 2vh;
+      margin: 1.5vh 0;
+    }
+    img {
+      width: 60%;
+      height: auto;
+      border: 0.5rem solid white;
+      border-radius: 1rem;
     }
   }
 

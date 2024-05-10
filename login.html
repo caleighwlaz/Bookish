@@ -21,7 +21,7 @@
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 
     <!-- Icons -->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/3fcf703b86.js" crossorigin="anonymous"></script>
 
   </head>
   <body>
@@ -60,13 +60,13 @@
             <label for="email">email</label>
             <br>
             <input type="text" id="email" required>
-            <i class='bx bx-envelope'></i>
           </div>
           <div class="input-box" id="password-section">
             <label for="password">password</label>
             <br>
             <input type="password" id="password" required>
-            <i class='bx bx-lock-alt'></i>
+            <i class="fa-solid fa-eye" id="togglepassword"></i>
+            <script src="scripts/toggle-password.js"></script>
           </div>
           <div class="remember-me">
             <input type="checkbox" id="remember">
