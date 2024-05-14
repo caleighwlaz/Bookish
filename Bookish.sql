@@ -4,7 +4,7 @@ USE Bookish;
 --     title TEXT,
 --     author TEXT,
 --     isbn BIGINT DEFAULT 9780000000000,
---     genre TEXT,
+--     genre TEXT, 
 --     img_path TEXT,
 --     covers INTEGER
 -- );
