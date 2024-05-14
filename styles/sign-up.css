@@ -290,4 +290,16 @@ header {
   top: 34vh;
   right: 4vw;
   color: grey;
+}
+
+p a {
+  font-size: 1em;
+  color: hsl(262, 44%, 66%);
+}
+p a:hover {
+  color: hsl(262, 50%, 80%);
+  transition: 1s;
+}
+p a:active {
+  text-decoration: underline;
 }/*# sourceMappingURL=sign-up.css.map */

@@ -77,3 +77,17 @@ header {
   right: 4vw;
   color: grey;
 }
+
+p {
+  a {
+    font-size: 1em;
+    color: base.$purple;
+    &:hover {
+      color: hsl(262, 50%, 80%);
+      transition: 1s;
+    }
+    &:active {
+      text-decoration: underline;
+    }
+  }
+}
