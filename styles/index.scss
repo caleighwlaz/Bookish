@@ -17,11 +17,11 @@ header {
 
 main {
   grid-area: intro;
-  border-right: 5rem solid $brown;
-  border-left: 5rem solid $brown;
-  border-bottom: 5rem solid $brown;
+  border-right: 5rem solid base.$brown;
+  border-left: 5rem solid base.$brown;
+  border-bottom: 5rem solid base.$brown;
   padding: 5%;
-  background-color: $tan;
+  background-color: base.$tan;
 }
 
 .main-login-area {
