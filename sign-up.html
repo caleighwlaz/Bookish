@@ -55,14 +55,25 @@
       <div class="card">
         <h1>Sign Up</h1>
         <form action="">
+          <div class="input-box">
             <label for="username">username</label>
             <input type="text" id="username" required>
+          </div>
+          <div class="input-box">
             <label for="email">email</label>
             <input type="text" id="email" required>
+          </div>
+          <div class="input-box">
             <label for="password">password</label>
             <input type="password" id="password" required>
             <i class="fa-solid fa-eye" id="togglepassword"></i>
             <script src="scripts/toggle-password.js"></script>
+          </div>
+            <ul>
+              <li>at least 8 characters</li>
+              <li>a mixture of both uppercase and lowercase letters</li>
+              <li>inclusion of at least one special character</li>
+            </ul>
           <button type="submit">Create Account</button>
           <p>Already have an account? <a href="sign-up.html">Log in here</a></p>
         </form>

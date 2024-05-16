@@ -242,7 +242,7 @@ header {
   top: 20vh;
   padding: 3vh 3vw;
   font-size: calc(3vw + 1vh);
-  line-height: 75%;
+  line-height: 60%;
 }
 .card h1 {
   text-align: center;
@@ -256,6 +256,7 @@ header {
   border-radius: 0.5rem;
   padding: 0.5rem 0;
   border: 0;
+  margin-bottom: 1vh;
 }
 .card form button:hover {
   background-color: hsl(262, 40%, 55%);
@@ -263,6 +264,9 @@ header {
 }
 .card form button:active {
   text-decoration: underline;
+}
+.card form p {
+  line-height: 200%;
 }
 .card form p a {
   font-size: 1em;
@@ -277,27 +281,27 @@ header {
 }
 .card form .input-box {
   width: 100%;
-  margin: 1rem 0;
+  margin-top: 1.5vh;
   position: relative;
 }
 .card form .input-box label {
   position: relative;
   top: 1rem;
+  font-size: 1em;
 }
 .card form .input-box input {
   width: 100%;
   height: 4vh;
+  margin-top: 2vh;
 }
 .card form .input-box i {
+  cursor: pointer;
   position: absolute;
   top: 70%;
   right: 1.5%;
+  color: hsl(0, 0%, 35%);
 }
 .card form .remember-me {
   accent-color: hsl(262, 44%, 66%);
-}
-
-.remember {
-  transform: scale(2);
-  margin: 2rem 0 2rem 0.5vw;
+  font-size: 0.8em;
 }/*# sourceMappingURL=login.css.map */

@@ -28,7 +28,7 @@ header {
   top: 20vh;
   padding: 3vh 3vw;
   font-size: calc(3vw + 1vh);
-  line-height: 75%;
+  line-height: 60%;
   h1 {
     text-align: center;
   }
@@ -40,6 +40,7 @@ header {
       border-radius: 0.5rem;
       padding: 0.5rem 0;
       border: 0;
+      margin-bottom: 1vh;
       &:hover {
         background-color: hsl(262, 40%, 55%);
         transition: 1s;
@@ -49,6 +50,7 @@ header {
       }
     }
     p {
+      line-height: 200%;
       a {
         font-size: 1em;
         color: base.$purple;
@@ -63,29 +65,29 @@ header {
     }
     .input-box {
       width: 100%;
-      margin: 1rem 0;
+      margin-top: 1.5vh;
       position: relative;
       label {
         position: relative;
         top: 1rem;
+        font-size: 1em;
       }
       input {
         width: 100%;
         height: 4vh;
+        margin-top: 2vh;
       }
       i {
+        cursor: pointer;
         position: absolute;
         top: 70%;
         right: 1.5%;
+        color: hsl(0, 0%, 35%)
       }
     }
     .remember-me {
       accent-color: base.$purple;
+      font-size: 0.8em;
     }
   }
-}
-
-.remember {
-  transform: scale(2);
-  margin: 2rem 0 2rem 0.5vw;
 }

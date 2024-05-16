@@ -242,7 +242,7 @@ header {
   top: 20vh;
   padding: 3vh 3vw;
   font-size: calc(3vw + 1vh);
-  line-height: 75%;
+  line-height: 60%;
 }
 .card h1 {
   text-align: center;
@@ -256,7 +256,7 @@ header {
   border-radius: 0.5rem;
   padding: 0.5rem 0;
   border: 0;
-  margin-top: 3vh;
+  margin-bottom: 1vh;
 }
 .card form button:hover {
   background-color: hsl(262, 40%, 55%);
@@ -267,29 +267,23 @@ header {
 }
 .card form .input-box {
   width: 100%;
-  margin: 1rem 0;
   position: relative;
+  margin-top: 1.5vh;
 }
 .card form .input-box label {
   position: relative;
-  top: 1rem;
+  font-size: 1em;
 }
 .card form .input-box input {
   width: 100%;
   height: 4vh;
 }
 .card form .input-box i {
+  cursor: pointer;
   position: absolute;
   top: 70%;
   right: 1.5%;
-}
-
-#togglepassword {
-  cursor: pointer;
-  position: absolute;
-  top: 34vh;
-  right: 4vw;
-  color: grey;
+  color: hsl(0, 0%, 35%);
 }
 
 p a {
@@ -302,4 +296,8 @@ p a:hover {
 }
 p a:active {
   text-decoration: underline;
+}
+
+ul {
+  margin-left: 2vw;
 }/*# sourceMappingURL=sign-up.css.map */
