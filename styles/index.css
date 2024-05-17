@@ -11,7 +11,7 @@ body {
   font-weight: 400;
   font-style: normal;
   background-color: hsl(262, 44%, 66%);
-  font-size: 6rem;
+  font-size: 3.9rem;
   overflow-x: hidden;
 }
 
@@ -206,17 +206,7 @@ a:active {
     font-size: 57.5%;
   }
 }
-@media (max-width: 896px) {
-  #grid-container {
-    display: block;
-    height: 100vh;
-    width: 100vw;
-  }
-  * {
-    font-size: 57.5%;
-  }
-}
-#grid-container {
+body {
   display: grid;
   grid-template-areas: "header header" "intro .";
   grid-template-rows: 1fr 7fr;
@@ -259,4 +249,15 @@ main p {
 main button {
   font-size: 2rem;
   margin: 1.5rem 1rem;
+}
+
+@media (max-width: 896px) {
+  body {
+    display: block;
+    height: 100vh;
+    width: 100vw;
+  }
+  * {
+    font-size: 57.5%;
+  }
 }/*# sourceMappingURL=index.css.map */

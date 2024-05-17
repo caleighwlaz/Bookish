@@ -1,6 +1,6 @@
 @use 'base';
 
-#grid-container {
+body {
   display: grid;
   grid-template-areas:
     "header header"
@@ -46,5 +46,16 @@ main {
   button {
     font-size: 2rem;
     margin: 1.5rem 1rem;
+  }
+}
+
+@media (max-width: 896px) {
+  body {
+    display: block;
+    height: 100vh;
+    width: 100vw;
+  }
+  * {
+    font-size: 57.5%;
   }
 }
