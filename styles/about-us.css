@@ -11,7 +11,7 @@ body {
   font-weight: 400;
   font-style: normal;
   background-color: hsl(262, 44%, 66%);
-  font-size: 6rem;
+  font-size: 3.9rem;
   overflow-x: hidden;
 }
 
@@ -206,16 +206,6 @@ a:active {
     font-size: 57.5%;
   }
 }
-@media (max-width: 896px) {
-  #grid-container {
-    display: block;
-    height: 100vh;
-    width: 100vw;
-  }
-  * {
-    font-size: 57.5%;
-  }
-}
 #grid-container {
   display: grid;
   grid-template-areas: "header header header" "malia overview caleigh";
@@ -292,8 +282,7 @@ main p {
   border-radius: 1rem;
 }
 
-.github,
-.email {
+.github {
   background-color: hsl(262, 44%, 66%);
   border: 0.2rem solid white;
   border-radius: 1.5rem;
@@ -301,8 +290,7 @@ main p {
   font-size: 0.5em;
   margin: 1.25vh 5vw;
 }
-.github:hover,
-.email:hover {
+.github:hover {
   background-color: hsl(262, 50%, 85%);
   transition: 1s;
   color: black;
