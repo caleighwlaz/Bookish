@@ -1,0 +1,93 @@
+@use 'base';
+
+#grid-container {
+  display: grid;
+  grid-template-areas:
+    "header"
+    ".";
+  grid-template-rows: 1fr 7fr;
+  height: 100vh;
+  width: 100vw;
+}
+
+header {
+  grid-area: header;
+}
+
+.card {
+  position: absolute;
+  width: 70%;
+  height: 70%;
+  background-color: base.$blue;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 2rem 0.5rem hsla(27, 51%, 75%, 0.5);
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top: 20vh;
+  padding: 3vh 3vw;
+  font-size: calc(3vw + 1vh);
+  line-height: 60%;
+  h1 {
+    text-align: center;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    button {
+      background-color: base.$purple;
+      border-radius: 0.5rem;
+      padding: 0.5rem 0;
+      border: 0;
+      margin-bottom: 1vh;
+      &:hover {
+        background-color: hsl(262, 40%, 55%);
+        transition: 1s;
+      }
+      &:active {
+        text-decoration: underline;
+      }
+    }
+    p {
+      line-height: 200%;
+      a {
+        font-size: 1em;
+        color: base.$purple;
+        &:hover {
+          color: hsl(262, 50%, 80%);
+          transition: 1s;
+        }
+        &:active {
+          text-decoration: underline;
+        }
+      }
+    }
+    .input-box {
+      width: 100%;
+      margin-top: 1.5vh;
+      position: relative;
+      label {
+        position: relative;
+        top: 1rem;
+        font-size: 1em;
+      }
+      input {
+        width: 100%;
+        height: 4vh;
+        margin-top: 2vh;
+      }
+      i {
+        cursor: pointer;
+        position: absolute;
+        top: 70%;
+        right: 1.5%;
+        color: hsl(0, 0%, 35%)
+      }
+    }
+    .remember-me {
+      accent-color: base.$purple;
+      font-size: 0.8em;
+    }
+  }
+}

@@ -1,0 +1,61 @@
+@use 'base';
+
+body {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "intro .";
+  grid-template-rows: 1fr 7fr;
+  grid-template-columns: 4fr 5fr;
+  height: 100vh;
+  width: 100vw;
+}
+
+header {
+  grid-area: header;
+}
+
+main {
+  grid-area: intro;
+  border-right: 5rem solid base.$brown;
+  border-left: 5rem solid base.$brown;
+  border-bottom: 5rem solid base.$brown;
+  padding: 5%;
+  background-color: base.$tan;
+}
+
+.main-login-area {
+  font-size: 3rem;
+  margin: 1.5rem 1rem;
+}
+
+main {
+  h1 {
+    padding: 0 0 2rem;
+    font-size: 1.4em;
+    font-weight: 450;
+    span {
+      font-size: 1em;
+      font-weight: 450;
+    }
+  }
+  p {
+    padding-bottom: 1.5rem;
+    line-height: 3rem;
+  }
+  button {
+    font-size: 2rem;
+    margin: 1.5rem 1rem;
+  }
+}
+
+@media (max-width: 896px) {
+  body {
+    display: block;
+    height: 100vh;
+    width: 100vw;
+  }
+  * {
+    font-size: 57.5%;
+  }
+}
