@@ -20,6 +20,13 @@
     <!-- Icon -->
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 
+    <!-- PyScript -->
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+        <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+    <py-config>
+        packages = ['pandas']
+    </py-config>
+
 </head>
 <body>
     <div class="background">
@@ -55,6 +62,14 @@
             <main>
                 <h1>All Books (sorted by genre)</h1>
                 <h3><span class="purple-text">Art and Photography</span></h3>
+                    <py-script>
+                        import pandas as pd
+                        import numpy as np
+                        df = pd.read_csv("./book-covers/Art-Photography/Art-Photography.csv")
+
+                        for books in df:
+                            print(df['title'])
+                    </py-script>
                 <h3><span class="blue-text">Biography</span></h3>
                 <h3>Business, Finance, and Law</h3>
                 <h3><span class="purple-text">Childrens Books</span></h3>
