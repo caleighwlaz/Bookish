@@ -20,12 +20,12 @@
     <!-- Icon -->
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 
-    <!-- PyScript -->
+    <!-- PyScript 
     <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
         <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
     <py-config>
         packages = ['pandas']
-    </py-config>
+    </py-config> -->
 
 </head>
 <body>
@@ -62,15 +62,97 @@
             <main>
                 <h1>All Books (sorted by genre)</h1>
                 <h3><span class="purple-text">Art and Photography</span></h3>
-                    <py-script>
+                    <div class="row">
+                        <div class="column">
+                            <img src="./book-covers/Art-Photography/0000001.jpg" style="width: 100%">
+                        </div>
+                        <div class="column">
+                            <img src="./book-covers/Art-Photography/0000005.jpg" style="width: 100%">
+                        </div>
+                        <div class="column">
+                            <img src="./book-covers/Art-Photography/0000006.jpg" style="width: 100%">
+                        </div>
+                        <div class="column">
+                            <img src="./book-covers/Art-Photography/0000007.jpg" style="width: 100%">
+                        </div>
+<!--                    <py-script>
                         import pandas as pd
                         import numpy as np
                         df = pd.read_csv("./book-covers/Art-Photography/Art-Photography.csv")
 
-                        for books in df:
-                            print(df['title'])
-                    </py-script>
+                        x = 1
+                        while x < 10:
+                            if df['id'] == x:
+                                print(df['title'])
+                            x++;
+                        </py-script> -->
+                        <p id="art-demo-title"></p>
+                        <p id="art-demo-author"></p>
+                        <script>
+                       /* const fs = require("fs");
+                        const readline = require("readline");
+                        const path = "./book-covers/Art-Photography/Art-Photography.csv";
+                        const readStream = fs.createReadStream(path);
+
+                        const readInterface = readline.createInterface({
+                            input: readStream
+                        });
+
+                        const output = [];
+
+                        readInterface.on("line", (line) => {
+                            const row = line.split(",");
+                            output.push(row);
+                        });
+
+                        readInterface.on("close", () => {
+                            console.log(output);
+                        }) */
+                      /*  let title = "";
+
+                        for(let i = 0; i < 5; i++) {
+                            if df['id'] == i:
+                                title += df['title'] + " ";
+                        } */
+
+                            let titles = "Fantastic Beasts &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp The Complete MAUS &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Humans of New York &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Ways of Seeing";
+                            let authors = "J.K. Rowling &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Art Spiegelman &nbsp&nbsp&nbsp&nbsp&nbsp Brandon Stanton &nbsp&nbsp&nbsp&nbsp John Berger";
+
+                      /*  for(let i = 0; i < 5; i++) {
+                            text += "The num is " + i + " ";
+                        } */
+
+                            document.getElementById("art-demo-title").innerHTML = titles;
+                            document.getElementById("art-demo-author").innerHTML = authors;
+                        </script>
+                    </div>
                 <h3><span class="blue-text">Biography</span></h3>
+                    <div class="row">
+                        <div class="column">
+                            <img src="./book-covers/Biography/0000001.jpg" style="width: 100%">
+                        </div>
+                        <div class="column">
+                            <img src="./book-covers/Biography/0000003.jpg" style="width: 100%">
+                        </div>
+                        <div class="column">
+                            <img src="./book-covers/Biography/0000004.jpg" style="width: 100%">
+                        </div>
+                        <div class="column">
+                            <img src="./book-covers/Biography/0000005.jpg" style="width: 100%">
+                        </div>
+                        <div class="column">
+                        <p id="bio-demo-title"></p>
+                        <p id="bio-demo-author"></p>
+                        <br>
+                        <script>
+                            titles = "&nbspBecoming &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Educated &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp When Breath Becomes Air";
+                            authors = "Adam Kay &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Michelle Obama &nbsp&nbsp&nbsp&nbsp Tara Westover &nbsp&nbsp Paul Kalanithi";
+
+                            document.getElementById("bio-demo-title").innerHTML = titles;
+                            document.getElementById("bio-demo-author").innerHTML = authors;
+                        </script>
+                        </div>
+                    </div>
                 <h3>Business, Finance, and Law</h3>
                 <h3><span class="purple-text">Childrens Books</span></h3>
                 <h3><span class="blue-text">Computing</span></h3>

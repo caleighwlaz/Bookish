@@ -231,6 +231,7 @@ main h3 {
     font-size: 2.2rem;
     font-weight: 450;
     padding-bottom: 1.5rem;
+    padding-top: 1.5rem;
 }
 
 main h3 span {
@@ -240,6 +241,23 @@ main h3 span {
 
 py-script {
     font-size: 2.0rem;
+}
+
+#art-demo-title, #art-demo-author,
+#bio-demo-title, #bio-demo-author {
+    font-size: 1.5rem;
+}
+
+.column {
+    float: left;
+    width: 25%;
+    padding: 5px;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
 }
 
 /*# sourceMappingURL=all-books.css.map */
