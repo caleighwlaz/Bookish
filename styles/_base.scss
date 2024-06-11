@@ -47,8 +47,7 @@ nav {
   display: flex;
   align-items: center;
   gap: 5rem;
-  margin-left: 3rem;
-  margin-right: 5rem;
+  margin-left: 2vw;
   flex-shrink: 0;
   font-size: 3rem;
 }
@@ -99,7 +98,7 @@ a {
 .hamburger-menu {
   $x-width: calc($hamburger-height * 1.41421356237);
   position: absolute;
-  right: 1.5vw;
+  right: 1.6rem;
   display: flex;
   flex-direction: column;
   gap: $hamburger-gap;
@@ -226,5 +225,21 @@ a {
 @media (max-width: 1048px) {
   * {
     font-size: 57.5%;
+  }
+}
+
+@media (min-width: 1061px) {
+  #sign-up-sidebar,
+  #login-sidebar {
+    display: none;
+  }
+}
+
+@media (max-width: 1060px) {
+  .header-login-area {
+    .sign-up,
+    .login {
+      display: none;
+    }
   }
 }
