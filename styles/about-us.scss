@@ -91,3 +91,25 @@ main {
     color: black;
   }
 }
+
+@media (max-width: 700px) {
+  #grid-container {
+    grid-template-areas:
+      "header"
+      "overview"
+      "malia"
+      "caleigh";
+    grid-template-rows: 3fr 13fr 4fr 4fr;
+    grid-template-columns: 1fr;
+  }
+  main {
+    margin-top: 5vh;
+    height: 100%;
+  }
+  .creator-card {
+    #malia {
+      margin-left: 0;
+      margin-right: 10vw;
+    }
+  }
+}
