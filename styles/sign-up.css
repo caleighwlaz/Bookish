@@ -242,7 +242,7 @@ header {
   right: 0;
   top: 20vh;
   padding: 3vh 3vw;
-  font-size: calc(3vw + 1vh);
+  font-size: calc(1vw + 5vh);
   line-height: 60%;
 }
 .card h1 {
