@@ -1,7 +1,7 @@
 # Bookish
 > Malia Porter and Caleigh Wlazlowski\
 > Dr. Bixler\
-> Senior Capstone-CS\
+> Senior Capstone - CS\
 > 10 June 2024
       
 ## About
