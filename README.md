@@ -16,7 +16,7 @@ We have created a website called Bookish, which is similar to Goodreads, for our
 > - [![MySQL](https://img.shields.io/badge/mysql-00618b?style=for-the-badge&logo=mysql&logoColor=white)](https://www.mysql.com/)
 ## Usage
 To view the website, clone this repository in VS Code and open the HTML files with the Live Server extension.
- - [to view on mobile, watch this tutorial](https://youtu.be/KI29qb0xcsM?si=aacFwi27LA1Mr5DR)
+ - [To view on mobile, watch this tutorial](https://youtu.be/KI29qb0xcsM?si=aacFwi27LA1Mr5DR)
 
 ## Roadmap
       The key milestones within the first two weeks, from February 12 to February 23,  consisted of learning the languages necessary to complete the project. Malia completed multiple courses on Codecademy for front-end development and Caleigh completed some courses on Codecademy for front-end development and multiple for back-end development. We worked together to pick out the color palette for the website and design the homepage in Google Drawings. Finally, Caleigh found two datasets to use and started cleaning the data while Malia began coding the homepage in VS Code.
