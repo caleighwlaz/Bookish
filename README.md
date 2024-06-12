@@ -4,5 +4,16 @@
 > Senior Capstone-CS\
 > 10 June 2024
       
-### About
-Our project is to create a website for readers to track their reading history, view book and user leaderboards, and possibly get recommendations. The site will allow readers to set goals to reach and add books to their reading list. Users will also be able to keep track of their reading activity and discover new books to read. Through the front-end (Malia), HTML, CSS, and JavaScript will be used to create the website and the design elements. Through the back-end (Caleigh), Python, JavaScript, and MySQL will be used to calculate statistics for each user (such as average pages per book and average pages read per week), manage databases, and allow users to search for books on the website and add them to their lists. The concept of our website is similar to Goodreads with additional features such as book and user leaderboards.
+## About
+We have created a website called Bookish, which is similar to Goodreads, for our Senior Capstone Project at MATES. Our book website would allow readers to log in, create a profile, set reading goals, and add books to their reading list. Users would also be able to keep track of their reading activity and discover new books to read. The site currently includes a homepage (where there is a summary of our website and where future book and reader leaderboards would be located), an About Us Page, a Login Page, a Sign-Up Page, and an All Books Page.
+
+### Built With
+[Python](https://www.python.org/)
+## Usage
+
+## Roadmap
+
+## Contributors
+
+## Acknowledgments
+We would like to thank Dr. Bixler, our teacher and mentor, for guiding us during this project. His support and insights have been valuable. We are also grateful for the Marine Academy of Technology and Environmental Science for providing the opportunity to conduct this project.
