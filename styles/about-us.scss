@@ -7,8 +7,12 @@
     "malia overview caleigh";
   grid-template-rows: 1fr 7fr;
   grid-template-columns: 1fr 2fr 1fr;
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
+}
+
+.background {
+  min-height: 100vh;
 }
 
 header {
@@ -58,7 +62,7 @@ main {
   border-radius: 1.25rem;
   box-shadow: 0.75rem 0.75rem 1rem 0 hsla(27, 51%, 75%, 0.5);
   text-align: center;
-  font-size: calc(2vw + 3.5vh);
+  font-size: calc(1vw + 4.5vh);
   line-height: 4rem;
   display: flex;
   flex-direction: column;
@@ -92,24 +96,23 @@ main {
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 550px) {
   #grid-container {
     grid-template-areas:
       "header"
       "overview"
       "malia"
       "caleigh";
-    grid-template-rows: 3fr 13fr 4fr 4fr;
+    grid-template-rows: 12.5vh 1fr 1fr 1fr;
     grid-template-columns: 1fr;
   }
-  main {
-    margin-top: 5vh;
-    height: 100%;
-  }
   .creator-card {
-    #malia {
-      margin-left: 0;
-      margin-right: 10vw;
+    &#malia,
+    &#caleigh {
+     margin: 0 3vw;
+     padding: 3vh 8vh;
+     flex-shrink: 1;
+     flex-grow: 1;
     }
   }
 }
